@@ -47,3 +47,6 @@ next-env.d.ts
 
 # local Claude Code config and project-scoped design skills
 /.claude/
+
+# /brag launch videos (work files and renders)
+/brag-output/

@@ -21,6 +21,8 @@
 html {
   background: var(--color-canvas);
   color-scheme: dark;
+  /* Reserve the scrollbar's space so locking scroll for a dialog doesn't shift the page. */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -125,6 +127,36 @@ html.lenis body {
   }
 }
 
+/* Project video lightbox. Native <dialog>; the page behind it doesn't scroll. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+.video-dialog {
+  /* 16:9 video plus the header (~50px, with headroom under the UA max-height), capped by height too so the controls
+     stay on screen on short laptop and landscape-phone viewports. */
+  width: min(100vw - 2rem, 72rem, calc((100dvh - 2rem - 64px) * 16 / 9));
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 220ms var(--ease-out-strong),
+    transform 220ms var(--ease-out-strong),
+    overlay 220ms allow-discrete,
+    display 220ms allow-discrete;
+}
+.video-dialog:not([open]) {
+  opacity: 0;
+  transform: scale(0.97);
+}
+@starting-style {
+  .video-dialog[open] {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+.video-dialog::backdrop {
+  background: rgb(5 4 3 / 0.82);
+}
+
 @keyframes pulse-dot {
   0%,
   100% {
@@ -142,5 +174,8 @@ html.lenis body {
   .marquee-track,
   .live-dot {
     animation: none;
+  }
+  .video-dialog {
+    transition: none;
   }
 }

@@ -44,6 +44,15 @@ The bug-trail stories and project write-ups stay hand-written in `src/content/si
 **Custom domain, optional:** add a `public/CNAME` file containing the domain, point its DNS at GitHub
 Pages, and change `siteUrl` in `src/content/site.ts`.
 
+## Project videos
+
+PRism and CodeFang have 20-second demo clips made with the
+[`/brag`](https://github.com/latent-spaces/brag) skill (`/brag-slim`). The 1080p masters, storyboards,
+share copy and the scripts that build them (scene HTML rendered frame by frame with Playwright,
+soundtrack synthesised in Python, encoded with ffmpeg) live in `brag-output/`, which is gitignored.
+The site uses 720p copies in `public/videos/`. To add one, put `<slug>.mp4` and `<slug>.jpg` there and
+set `video` on the project in `src/content/site.ts`, including a transcript of the on-screen text.
+
 ## Editing content
 
 The portrait in `public/` is generated from `assets/mohit.png`:

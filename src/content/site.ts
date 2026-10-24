@@ -35,6 +35,15 @@ export interface Project {
   readonly repo: string;
   readonly live?: string;
   readonly preview: readonly string[]; // how it works, as terminal lines; never invented metrics
+  readonly video?: ProjectVideo;
+}
+
+export interface ProjectVideo {
+  readonly src: string; // file in public/
+  readonly poster: string;
+  readonly seconds: number;
+  // The clips have no narration, so screen readers get the on-screen text instead.
+  readonly transcript: string;
 }
 
 export interface StackGroup {
@@ -141,10 +150,18 @@ export const projects: readonly Project[] = [
     slug: "prism",
     title: "PRism",
     summary:
-      "A precision-first AI code reviewer, run as a GitHub Action or CLI. One model proposes defects, a second tries to refute each, and only survivors are posted inline. PR code is treated as untrusted and never executed. In a field test it anchored 3 of 3 planted bugs to the right line and found one I hadn't planted.",
+      "A precision-first AI code reviewer, run as a GitHub Action or CLI. One model proposes defects, a second tries to refute each, and only survivors are posted inline. PR code is treated as untrusted and never executed. In a field test all 3 of its comments landed on the right line, and one flagged a real bug nobody had planted.",
     tags: ["TypeScript", "GitHub Actions", "OpenRouter", "Octokit", "Zod", "Vitest"],
     repo: `${GITHUB}/PRism`,
     preview: ["on: pull_request", "propose → refute → gate", "PR head code never executed", "field test: 3/3 on the right line", "✓ 87 Vitest tests"],
+    // Made with /brag; masters and storyboard in brag-output/prism (not deployed).
+    video: {
+      src: "/videos/prism.mp4",
+      poster: "/videos/prism.jpg",
+      seconds: 20,
+      transcript:
+        "A pull request fills with twenty vague AI comments: 20 AI comments, 4 real. PRism: the AI reviewer that tries to prove itself wrong. Pass 1 finds, pass 2 tries to refute: of five findings, one is refuted, one falls below the confidence bar, three are posted. 3/3 comments on the exact line, including an off-by-one on line 14 with a suggested fix. An empty review is a correct review. GitHub Action and CLI, github.com/MohitSAGAR11/PRism.",
+    },
   },
   {
     slug: "codefang",
@@ -154,6 +171,14 @@ export const projects: readonly Project[] = [
     tags: ["TypeScript", "Bun", "Vercel AI SDK", "Telegraf", "Zod"],
     repo: `${GITHUB}/CodeFang`,
     preview: ["$ codefang", "edits staged in memory, not on disk", "review the unified diff", "? approve changes (y/N)", "✓ 81 Bun tests"],
+    // Made with /brag; masters and storyboard in brag-output/codefang (not deployed).
+    video: {
+      src: "/videos/codefang.mp4",
+      poster: "/videos/codefang.jpg",
+      seconds: 20,
+      transcript:
+        "The agent reads, edits and queues a command: 3 changes staged, 0 written. CodeFang, agentic coding in your terminal: nothing touches your disk until you say so. Read the diff, then it lands: the change is reviewed one by one and applied. Approve from your phone with Telegram's Accept All. Your secrets stay invisible: reading .env is excluded by policy and paths outside the workspace are refused. 81 tests, nothing written without a yes. github.com/MohitSAGAR11/CodeFang.",
+    },
   },
   {
     slug: "typeahead",
@@ -163,6 +188,14 @@ export const projects: readonly Project[] = [
     tags: ["TypeScript", "Redis", "Kafka", "PostgreSQL", "Docker"],
     repo: `${GITHUB}/typeahead-system`,
     preview: ["GET /suggest?q=…", "hash ring → cache node", "Redis hit, else PostgreSQL", "search event → Kafka → batch writer", "✓ docker compose up"],
+    // Made with /brag; masters and storyboard in brag-output/typeahead (not deployed).
+    video: {
+      src: "/videos/typeahead.mp4",
+      poster: "/videos/typeahead.jpg",
+      seconds: 20,
+      transcript:
+        "Typing t, th, the: the suggestions re-rank on every keystroke with real counts from the dataset. Every keystroke, answered. TypeAhead, distributed: one search box, Redis, Kafka and Postgres behind it. One ring, three cache nodes: the prefix the hashes onto a ring of 150 virtual nodes per Redis node and lands on Redis-B. Searches queue, writes batch: searches go to the search-events Kafka topic and the batch writer turns 14 searches into one multi-row upsert. The whole stack, one command: docker compose up starts all ten services. github.com/MohitSAGAR11/typeahead-system.",
+    },
   },
   {
     slug: "notebooklm",
@@ -172,6 +205,14 @@ export const projects: readonly Project[] = [
     repo: `${GITHUB}/Notebook-LM`,
     live: "https://rag-notebook-lm.netlify.app/",
     preview: ["upload your documents", "chunk → embed → store", "retrieve by similarity", "answer from your own files", "✓ live on Netlify"],
+    // Made with /brag; masters and storyboard in brag-output/notebooklm (not deployed).
+    video: {
+      src: "/videos/notebooklm.mp4",
+      poster: "/videos/notebooklm.jpg",
+      seconds: 20,
+      transcript:
+        "A README is uploaded to the Notebook-LLM workspace and split into 6 chunks. Chat with your documents. Notebook-LLM, a retrieval-augmented generation application: upload a PDF or TXT, get grounded answers. Three searches, one reranked top 5: the question is expanded into three variants, candidates are merged and an LLM scores them 0 to 10, keeping the top 5. Answers from your file: the chat answers that documents are split into 800-character chunks with a 150-character overlap. Temperature 0.1, no guessing. github.com/MohitSAGAR11/Notebook-LM.",
+    },
   },
 ];
 

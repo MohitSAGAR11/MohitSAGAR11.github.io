@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef, useState } from "react";
 import type { Project } from "@/content/site";
 import { gsap, hasFinePointer, prefersReducedMotion, registerGsap } from "@/lib/motion";
+import { VideoDemo } from "./VideoDemo";
 
 type Props = {
   projects: readonly Project[];
@@ -39,6 +40,8 @@ export function WorkList({ projects }: Props) {
 
       const handleMove = contextSafe((event: PointerEvent) => {
         if (event.pointerType !== "mouse" || !hasFinePointer()) return;
+        // Events from an open video dialog bubble through the row; the preview stays put.
+        if ((event.target as Element).closest("dialog")) return;
         const row = (event.target as Element).closest<HTMLElement>("[data-index]");
         if (row) show(Number(row.dataset.index));
         // Sit above-right of the cursor, over the dimmed row before, so the
@@ -54,11 +57,18 @@ export function WorkList({ projects }: Props) {
         gsap.to(preview, { autoAlpha: 0, scale: 0.92, duration: 0.25, ease: "power3.out", overwrite: "auto" });
       });
 
+      // Opening a project video hides the preview and undims the rows behind the dialog.
+      const handleClick = contextSafe((event: MouseEvent) => {
+        if ((event.target as Element).closest("[data-video-open]")) handleLeave();
+      });
+
       list.addEventListener("pointermove", handleMove);
       list.addEventListener("pointerleave", handleLeave);
+      list.addEventListener("click", handleClick);
       return () => {
         list.removeEventListener("pointermove", handleMove);
         list.removeEventListener("pointerleave", handleLeave);
+        list.removeEventListener("click", handleClick);
       };
     },
     { scope: listRef },
@@ -81,8 +91,13 @@ export function WorkList({ projects }: Props) {
                   <h3 className="display text-[clamp(2.4rem,6vw,4.5rem)] text-bone">{project.title}</h3>
                   <p className="mt-3 max-w-2xl text-muted">{project.summary}</p>
                   {/* Shown inline below lg; kept for screen readers at lg+, where the
-                      cursor preview (aria-hidden) shows it visually instead. */}
-                  <PreviewLines lines={project.preview} className="mt-5 rounded-lg border border-line bg-surface p-4 lg:sr-only" />
+                      cursor preview (aria-hidden) shows it visually instead. A project
+                      with a video shows that instead, so the lines stay screen-reader-only. */}
+                  <PreviewLines
+                    lines={project.preview}
+                    className={project.video ? "sr-only" : "mt-5 rounded-lg border border-line bg-surface p-4 lg:sr-only"}
+                  />
+                  {project.video && <VideoDemo video={project.video} title={project.title} />}
                 </div>
                 <div className="flex flex-col gap-5 lg:items-end">
                   <ul className="flex flex-wrap gap-2 lg:justify-end">

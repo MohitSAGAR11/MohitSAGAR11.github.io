@@ -60,6 +60,26 @@ test.describe("home page", () => {
     await expect(issueLink).toHaveCSS("opacity", "1");
   });
 
+  test("project video opens in a dialog, closes on Escape and returns focus", async ({ page }) => {
+    await page.goto("/");
+    const play = page.getByRole("button", { name: /^Watch the demo of PRism/ });
+    await play.scrollIntoViewIfNeeded();
+    await expect(play).toBeVisible({ timeout: 6000 });
+    await play.click();
+
+    const dialog = page.getByRole("dialog", { name: "PRism demo video" });
+    await expect(dialog).toBeVisible();
+    await expect(dialog.locator("video")).toHaveAttribute("aria-describedby", /.+/);
+    // Located by src, not role: once closed, the dialog leaves the accessibility tree.
+    const video = page.locator('video[src="/videos/prism.mp4"]');
+    await expect(video).toHaveCount(1);
+
+    await page.keyboard.press("Escape");
+    await expect(dialog).toBeHidden();
+    await expect(play).toBeFocused();
+    expect(await video.evaluate((v: HTMLVideoElement) => v.paused)).toBe(true);
+  });
+
   test("hero stats end on their real values", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator("[data-count]").first()).toHaveText("10", { timeout: 6000 });
