@@ -1,0 +1,143 @@
+{
+  "syncedAt": "2026-10-24",
+  "stats": {
+    "mergedPrs": 10,
+    "issuesFiled": 7,
+    "publicRepos": 56
+  },
+  "contributions": [
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14024,
+      "title": "fix(match): match authors regardless of name order",
+      "date": "2026-10-21",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14024"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13888,
+      "title": "fix(marc): Keep the MARC $c title out of the author name",
+      "date": "2026-10-18",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/13888"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 134,
+      "title": "Reject an invalid schema every time it's validated",
+      "date": "2026-10-14",
+      "status": "merged",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/134"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13880,
+      "title": "Build the FastAPI test app with LOCAL_DEV off",
+      "date": "2026-10-13",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/13880"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13718,
+      "title": "Status page: four small UI/UX improvements",
+      "date": "2026-10-07",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/13718"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13751,
+      "title": "Name the records in the author merge confirmation",
+      "date": "2026-10-05",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/13751"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13750,
+      "title": "Document the button-order convention",
+      "date": "2026-10-05",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/13750"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13671,
+      "title": "refactor: replace the My Book Notes modal with ol-dialog",
+      "date": "2026-09-18",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/13671"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14054,
+      "title": "feat(acquisitions): carry the OPDS source publication and feed name",
+      "date": "2026-10-22",
+      "status": "review",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14054"
+    },
+    {
+      "repo": "hyperjump-io/uri",
+      "number": 12,
+      "title": "Remove dot segments correctly in paths that don't start with a slash",
+      "date": "2026-10-22",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/uri/pull/12"
+    },
+    {
+      "repo": "hyperjump-io/json-schema-errors",
+      "number": 296,
+      "title": "fix: support content and OpenAPI keywords",
+      "date": "2026-10-19",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema-errors/pull/296"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14007,
+      "title": "feat(tags): add a dashboard for exploring tags by type",
+      "date": "2026-10-18",
+      "status": "review",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14007"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14002,
+      "title": "Pass the base URL to dynlinks explicitly instead of setting `web.ctx.home` in `/api/books` and `/api/volumes`",
+      "date": "2026-10-17",
+      "status": "review",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14002"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13941,
+      "title": "fix(lenny): an unreadable node body is unreachable, not zero loans",
+      "date": "2026-10-15",
+      "status": "review",
+      "href": "https://github.com/internetarchive/openlibrary/pull/13941"
+    }
+  ],
+  "prStatus": {
+    "https://github.com/internetarchive/openlibrary/pull/14054": "review",
+    "https://github.com/hyperjump-io/uri/pull/12": "review",
+    "https://github.com/hyperjump-io/json-schema-errors/pull/296": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14024": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/14007": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14002": "review",
+    "https://github.com/internetarchive/openlibrary/pull/13941": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/134": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/13888": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/13880": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/13879": "closed",
+    "https://github.com/internetarchive/openlibrary/pull/13751": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/13750": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/13718": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/13671": "merged",
+    "https://github.com/firstcontributions/first-contributions/pull/124952": "merged",
+    "https://github.com/Nency-Ravaliya/devops-heros/pull/42": "review",
+    "https://github.com/Nency-Ravaliya/devops-heros/pull/2": "review",
+    "https://github.com/vimalyad/classical_machine_learning/pull/1": "merged"
+  }
+}

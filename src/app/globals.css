@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #0f0e0c;
+  --color-surface: #1a1916;
+  --color-line: #2a2824;
+  --color-bone: #ece8df;
+  --color-muted: #8f897e;
+  --color-dim: #6b665c; /* 3.4:1 on canvas: large text only */
+  --color-amber: #ffb000;
+  --color-merged: #7ee787;
+
+  --font-display: var(--font-archivo), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --radius-card: 14px;
+}
+
+html {
+  background: var(--color-canvas);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-canvas);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Condensed heavy display face via Archivo's width axis. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 62%;
+  text-transform: uppercase;
+  line-height: 0.86;
+  letter-spacing: -0.01em;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Masked word/line reveals. Hidden only once JS has opted into motion, so the
+   page reads fine without JavaScript or with reduced motion. */
+.word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.06em;
+  margin-bottom: -0.06em;
+}
+.word {
+  display: inline-block;
+}
+/* Opacity, not visibility: links waiting to be revealed must stay focusable
+   and in the accessibility tree. Focus reveals them immediately. */
+html.motion [data-split] .word,
+html.motion [data-reveal-item],
+html.motion [data-step],
+html.motion [data-hero-details] > *,
+html.motion [data-count] {
+  opacity: 0;
+}
+html.motion [data-reveal-item]:focus-within,
+html.motion [data-step]:focus-within,
+html.motion [data-hero-details] > :focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* First visit only; see the inline script in layout.tsx. */
+html.preload {
+  overflow: hidden;
+}
+html.preload .preloader {
+  display: flex;
+}
+html.preload [data-line] {
+  opacity: 0;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/* Marquee: constant motion is linear, and stops entirely under reduced motion. */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 38s linear infinite;
+}
+@media (hover: hover) and (pointer: fine) {
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(255 176 0 / 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgb(255 176 0 / 0);
+  }
+}
+.live-dot {
+  animation: pulse-dot 2.4s var(--ease-out-strong) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .live-dot {
+    animation: none;
+  }
+}
