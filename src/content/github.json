@@ -1,11 +1,35 @@
 {
-  "syncedAt": "2026-10-26",
+  "syncedAt": "2026-11-02",
   "stats": {
-    "mergedPrs": 10,
-    "issuesFiled": 7,
-    "publicRepos": 57
+    "mergedPrs": 13,
+    "issuesFiled": 8,
+    "publicRepos": 60
   },
   "contributions": [
+    {
+      "repo": "hyperjump-io/json-schema-errors",
+      "number": 296,
+      "title": "fix: support content and OpenAPI keywords",
+      "date": "2026-11-01",
+      "status": "merged",
+      "href": "https://github.com/hyperjump-io/json-schema-errors/pull/296"
+    },
+    {
+      "repo": "hyperjump-io/uri",
+      "number": 12,
+      "title": "Remove dot segments correctly in paths that don't start with a slash",
+      "date": "2026-10-30",
+      "status": "merged",
+      "href": "https://github.com/hyperjump-io/uri/pull/12"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14002,
+      "title": "Pass the base URL to dynlinks explicitly instead of setting `web.ctx.home` in `/api/books` and `/api/volumes`",
+      "date": "2026-10-27",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14002"
+    },
     {
       "repo": "internetarchive/openlibrary",
       "number": 14024,
@@ -71,28 +95,44 @@
       "href": "https://github.com/internetarchive/openlibrary/pull/13671"
     },
     {
+      "repo": "hyperjump-io/json-schema",
+      "number": 140,
+      "title": "Fix multipleOf for small divisors and large values",
+      "date": "2026-10-30",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/140"
+    },
+    {
+      "repo": "hyperjump-io/json-schema-formats",
+      "number": 27,
+      "title": "Handle address literal tags the same way in isEmail and isIdnEmail",
+      "date": "2026-10-30",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema-formats/pull/27"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14198,
+      "title": "Strip presentation, diff and tracking params from rel=canonical",
+      "date": "2026-10-29",
+      "status": "review",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14198"
+    },
+    {
+      "repo": "internetarchive/infogami",
+      "number": 284,
+      "title": "Resolve only the matching property in Thing.get_property",
+      "date": "2026-10-27",
+      "status": "review",
+      "href": "https://github.com/internetarchive/infogami/pull/284"
+    },
+    {
       "repo": "internetarchive/openlibrary",
       "number": 14054,
       "title": "feat(acquisitions): carry the OPDS source publication and feed name",
       "date": "2026-10-22",
       "status": "review",
       "href": "https://github.com/internetarchive/openlibrary/pull/14054"
-    },
-    {
-      "repo": "hyperjump-io/uri",
-      "number": 12,
-      "title": "Remove dot segments correctly in paths that don't start with a slash",
-      "date": "2026-10-22",
-      "status": "review",
-      "href": "https://github.com/hyperjump-io/uri/pull/12"
-    },
-    {
-      "repo": "hyperjump-io/json-schema-errors",
-      "number": 296,
-      "title": "fix: support content and OpenAPI keywords",
-      "date": "2026-10-19",
-      "status": "review",
-      "href": "https://github.com/hyperjump-io/json-schema-errors/pull/296"
     },
     {
       "repo": "internetarchive/openlibrary",
@@ -104,14 +144,6 @@
     },
     {
       "repo": "internetarchive/openlibrary",
-      "number": 14002,
-      "title": "Pass the base URL to dynlinks explicitly instead of setting `web.ctx.home` in `/api/books` and `/api/volumes`",
-      "date": "2026-10-17",
-      "status": "review",
-      "href": "https://github.com/internetarchive/openlibrary/pull/14002"
-    },
-    {
-      "repo": "internetarchive/openlibrary",
       "number": 13941,
       "title": "fix(lenny): an unreadable node body is unreachable, not zero loans",
       "date": "2026-10-15",
@@ -120,12 +152,17 @@
     }
   ],
   "prStatus": {
+    "https://github.com/hyperjump-io/json-schema-formats/pull/27": "review",
+    "https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1254": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/140": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14198": "review",
+    "https://github.com/internetarchive/infogami/pull/284": "review",
     "https://github.com/internetarchive/openlibrary/pull/14054": "review",
-    "https://github.com/hyperjump-io/uri/pull/12": "review",
-    "https://github.com/hyperjump-io/json-schema-errors/pull/296": "review",
+    "https://github.com/hyperjump-io/uri/pull/12": "merged",
+    "https://github.com/hyperjump-io/json-schema-errors/pull/296": "merged",
     "https://github.com/internetarchive/openlibrary/pull/14024": "merged",
     "https://github.com/internetarchive/openlibrary/pull/14007": "review",
-    "https://github.com/internetarchive/openlibrary/pull/14002": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14002": "merged",
     "https://github.com/internetarchive/openlibrary/pull/13941": "review",
     "https://github.com/hyperjump-io/json-schema/pull/134": "merged",
     "https://github.com/internetarchive/openlibrary/pull/13888": "merged",
