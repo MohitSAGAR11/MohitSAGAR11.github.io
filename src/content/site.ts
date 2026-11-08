@@ -153,7 +153,8 @@ export const projects: readonly Project[] = [
       "A precision-first AI code reviewer, run as a GitHub Action or CLI. One model proposes defects, a second tries to refute each, and only survivors are posted inline. PR code is treated as untrusted and never executed. In a field test all 3 of its comments landed on the right line, and one flagged a real bug nobody had planted.",
     tags: ["TypeScript", "GitHub Actions", "OpenRouter", "Octokit", "Zod", "Vitest"],
     repo: `${GITHUB}/PRism`,
-    preview: ["on: pull_request", "propose → refute → gate", "PR head code never executed", "field test: 3/3 on the right line", "✓ 87 Vitest tests"],
+    live: "https://prism-demo-0cud.onrender.com",
+    preview: ["on: pull_request", "propose → refute → gate", "PR head code never executed", "field test: 3/3 on the right line", "✓ 156 Vitest tests"],
     // Made with /brag; masters and storyboard in brag-output/prism (not deployed).
     video: {
       src: "/videos/prism.mp4",
@@ -170,7 +171,8 @@ export const projects: readonly Project[] = [
       "A terminal coding agent that can't touch the disk without consent. Edits are staged in memory, and you approve them from a unified diff in the terminal or over Telegram. Every path is jailed to the workspace, with .env, .git and node_modules blocked.",
     tags: ["TypeScript", "Bun", "Vercel AI SDK", "Telegraf", "Zod"],
     repo: `${GITHUB}/CodeFang`,
-    preview: ["$ codefang", "edits staged in memory, not on disk", "review the unified diff", "? approve changes (y/N)", "✓ 81 Bun tests"],
+    live: "https://codefang-playground.onrender.com",
+    preview: ["$ codefang", "edits staged in memory, not on disk", "review the unified diff", "? approve changes (y/N)", "✓ 163 Bun tests"],
     // Made with /brag; masters and storyboard in brag-output/codefang (not deployed).
     video: {
       src: "/videos/codefang.mp4",
