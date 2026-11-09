@@ -1,11 +1,27 @@
 {
-  "syncedAt": "2026-11-02",
+  "syncedAt": "2026-11-09",
   "stats": {
-    "mergedPrs": 13,
-    "issuesFiled": 8,
-    "publicRepos": 60
+    "mergedPrs": 16,
+    "issuesFiled": 11,
+    "publicRepos": 61
   },
   "contributions": [
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14198,
+      "title": "Strip presentation, diff and tracking params from rel=canonical",
+      "date": "2026-11-04",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14198"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14054,
+      "title": "feat(acquisitions): carry the OPDS source publication and feed name",
+      "date": "2026-11-04",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14054"
+    },
     {
       "repo": "hyperjump-io/json-schema-errors",
       "number": 296,
@@ -95,6 +111,30 @@
       "href": "https://github.com/internetarchive/openlibrary/pull/13671"
     },
     {
+      "repo": "hyperjump-io/json-schema-errors",
+      "number": 303,
+      "title": "fix: report false schemas under propertyNames",
+      "date": "2026-11-08",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema-errors/pull/303"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 146,
+      "title": "Throw when registering over a schema with a different $id",
+      "date": "2026-11-08",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/146"
+    },
+    {
+      "repo": "hyperjump-io/json-language-server",
+      "number": 186,
+      "title": "Report a $schema that isn't a string",
+      "date": "2026-11-04",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-language-server/pull/186"
+    },
+    {
       "repo": "hyperjump-io/json-schema",
       "number": 140,
       "title": "Fix multipleOf for small divisors and large values",
@@ -111,28 +151,12 @@
       "href": "https://github.com/hyperjump-io/json-schema-formats/pull/27"
     },
     {
-      "repo": "internetarchive/openlibrary",
-      "number": 14198,
-      "title": "Strip presentation, diff and tracking params from rel=canonical",
-      "date": "2026-10-29",
-      "status": "review",
-      "href": "https://github.com/internetarchive/openlibrary/pull/14198"
-    },
-    {
       "repo": "internetarchive/infogami",
       "number": 284,
       "title": "Resolve only the matching property in Thing.get_property",
       "date": "2026-10-27",
       "status": "review",
       "href": "https://github.com/internetarchive/infogami/pull/284"
-    },
-    {
-      "repo": "internetarchive/openlibrary",
-      "number": 14054,
-      "title": "feat(acquisitions): carry the OPDS source publication and feed name",
-      "date": "2026-10-22",
-      "status": "review",
-      "href": "https://github.com/internetarchive/openlibrary/pull/14054"
     },
     {
       "repo": "internetarchive/openlibrary",
@@ -152,12 +176,16 @@
     }
   ],
   "prStatus": {
+    "https://github.com/hyperjump-io/json-schema-errors/pull/303": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/146": "review",
+    "https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1262": "review",
+    "https://github.com/hyperjump-io/json-language-server/pull/186": "review",
     "https://github.com/hyperjump-io/json-schema-formats/pull/27": "review",
-    "https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1254": "review",
+    "https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1254": "merged",
     "https://github.com/hyperjump-io/json-schema/pull/140": "review",
-    "https://github.com/internetarchive/openlibrary/pull/14198": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14198": "merged",
     "https://github.com/internetarchive/infogami/pull/284": "review",
-    "https://github.com/internetarchive/openlibrary/pull/14054": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14054": "merged",
     "https://github.com/hyperjump-io/uri/pull/12": "merged",
     "https://github.com/hyperjump-io/json-schema-errors/pull/296": "merged",
     "https://github.com/internetarchive/openlibrary/pull/14024": "merged",
