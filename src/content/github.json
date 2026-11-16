@@ -1,11 +1,43 @@
 {
-  "syncedAt": "2026-11-09",
+  "syncedAt": "2026-11-16",
   "stats": {
-    "mergedPrs": 16,
-    "issuesFiled": 11,
-    "publicRepos": 61
+    "mergedPrs": 20,
+    "issuesFiled": 15,
+    "publicRepos": 62
   },
   "contributions": [
+    {
+      "repo": "hyperjump-io/json-schema-errors",
+      "number": 303,
+      "title": "fix: report false schemas under propertyNames",
+      "date": "2026-11-15",
+      "status": "merged",
+      "href": "https://github.com/hyperjump-io/json-schema-errors/pull/303"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 140,
+      "title": "Fix multipleOf for small divisors and large values",
+      "date": "2026-11-12",
+      "status": "merged",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/140"
+    },
+    {
+      "repo": "internetarchive/infogami",
+      "number": 284,
+      "title": "Resolve only the matching property in Thing.get_property",
+      "date": "2026-11-10",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/infogami/pull/284"
+    },
+    {
+      "repo": "hyperjump-io/json-language-server",
+      "number": 186,
+      "title": "Report a $schema that isn't a string",
+      "date": "2026-11-09",
+      "status": "merged",
+      "href": "https://github.com/hyperjump-io/json-language-server/pull/186"
+    },
     {
       "repo": "internetarchive/openlibrary",
       "number": 14198,
@@ -111,12 +143,28 @@
       "href": "https://github.com/internetarchive/openlibrary/pull/13671"
     },
     {
-      "repo": "hyperjump-io/json-schema-errors",
-      "number": 303,
-      "title": "fix: report false schemas under propertyNames",
-      "date": "2026-11-08",
+      "repo": "internetarchive/openlibrary",
+      "number": 14395,
+      "title": "chore(deps): bump vendor/infogami to 2f85288 (get_property fix for #14078)",
+      "date": "2026-11-11",
       "status": "review",
-      "href": "https://github.com/hyperjump-io/json-schema-errors/pull/303"
+      "href": "https://github.com/internetarchive/openlibrary/pull/14395"
+    },
+    {
+      "repo": "internetarchive/infogami",
+      "number": 288,
+      "title": "perf(readquery): cache datatype lookups on the type's revision",
+      "date": "2026-11-11",
+      "status": "review",
+      "href": "https://github.com/internetarchive/infogami/pull/288"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14349,
+      "title": "fix(import): route ISBNs by canonical form, not raw string length",
+      "date": "2026-11-10",
+      "status": "review",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14349"
     },
     {
       "repo": "hyperjump-io/json-schema",
@@ -127,36 +175,12 @@
       "href": "https://github.com/hyperjump-io/json-schema/pull/146"
     },
     {
-      "repo": "hyperjump-io/json-language-server",
-      "number": 186,
-      "title": "Report a $schema that isn't a string",
-      "date": "2026-11-04",
-      "status": "review",
-      "href": "https://github.com/hyperjump-io/json-language-server/pull/186"
-    },
-    {
-      "repo": "hyperjump-io/json-schema",
-      "number": 140,
-      "title": "Fix multipleOf for small divisors and large values",
-      "date": "2026-10-30",
-      "status": "review",
-      "href": "https://github.com/hyperjump-io/json-schema/pull/140"
-    },
-    {
       "repo": "hyperjump-io/json-schema-formats",
       "number": 27,
       "title": "Handle address literal tags the same way in isEmail and isIdnEmail",
       "date": "2026-10-30",
       "status": "review",
       "href": "https://github.com/hyperjump-io/json-schema-formats/pull/27"
-    },
-    {
-      "repo": "internetarchive/infogami",
-      "number": 284,
-      "title": "Resolve only the matching property in Thing.get_property",
-      "date": "2026-10-27",
-      "status": "review",
-      "href": "https://github.com/internetarchive/infogami/pull/284"
     },
     {
       "repo": "internetarchive/openlibrary",
@@ -176,15 +200,18 @@
     }
   ],
   "prStatus": {
-    "https://github.com/hyperjump-io/json-schema-errors/pull/303": "review",
+    "https://github.com/internetarchive/infogami/pull/288": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14395": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14349": "review",
+    "https://github.com/hyperjump-io/json-schema-errors/pull/303": "merged",
     "https://github.com/hyperjump-io/json-schema/pull/146": "review",
     "https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1262": "review",
-    "https://github.com/hyperjump-io/json-language-server/pull/186": "review",
+    "https://github.com/hyperjump-io/json-language-server/pull/186": "merged",
     "https://github.com/hyperjump-io/json-schema-formats/pull/27": "review",
     "https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1254": "merged",
-    "https://github.com/hyperjump-io/json-schema/pull/140": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/140": "merged",
     "https://github.com/internetarchive/openlibrary/pull/14198": "merged",
-    "https://github.com/internetarchive/infogami/pull/284": "review",
+    "https://github.com/internetarchive/infogami/pull/284": "merged",
     "https://github.com/internetarchive/openlibrary/pull/14054": "merged",
     "https://github.com/hyperjump-io/uri/pull/12": "merged",
     "https://github.com/hyperjump-io/json-schema-errors/pull/296": "merged",
