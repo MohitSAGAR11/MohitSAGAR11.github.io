@@ -65,7 +65,7 @@ export const profile = {
   github: GITHUB,
   email: "mohitsagar378@gmail.com",
   // Leave any of these "" to hide that link.
-  linkedin: "https://www.linkedin.com/in/mohit-sagar-066834328/",
+  linkedin: "https://www.linkedin.com/in/mohitsagar11/",
   // Files go in the project's public/ folder; reference them from the site root.
   resume: "Mohit_Sagar_Resume.pdf", // e.g. "/resume.pdf" → Resume button in the hero and a footer link
   // Portrait in the About section. Both files are generated from the original:
