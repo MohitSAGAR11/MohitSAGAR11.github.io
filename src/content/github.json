@@ -1,11 +1,43 @@
 {
-  "syncedAt": "2026-11-16",
+  "syncedAt": "2026-11-23",
   "stats": {
-    "mergedPrs": 20,
-    "issuesFiled": 15,
+    "mergedPrs": 24,
+    "issuesFiled": 25,
     "publicRepos": 62
   },
   "contributions": [
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14594,
+      "title": "Drop the unused use_repr argument from the Paginate macro",
+      "date": "2026-11-23",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14594"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14568,
+      "title": "Render PageList from Jinja, and drop its unreachable use_repr branch",
+      "date": "2026-11-23",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14568"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14563,
+      "title": "Escape the iframe macro's attributes, and render it from Jinja",
+      "date": "2026-11-23",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14563"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14562,
+      "title": "Render the subject search form from Jinja, not Templetor",
+      "date": "2026-11-23",
+      "status": "merged",
+      "href": "https://github.com/internetarchive/openlibrary/pull/14562"
+    },
     {
       "repo": "hyperjump-io/json-schema-errors",
       "number": 303,
@@ -143,71 +175,102 @@
       "href": "https://github.com/internetarchive/openlibrary/pull/13671"
     },
     {
-      "repo": "internetarchive/openlibrary",
-      "number": 14395,
-      "title": "chore(deps): bump vendor/infogami to 2f85288 (get_property fix for #14078)",
-      "date": "2026-11-11",
+      "repo": "hyperjump-io/json-schema",
+      "number": 178,
+      "title": "Report a failing keyword in BASIC when its subschemas didn't say why",
+      "date": "2026-11-23",
       "status": "review",
-      "href": "https://github.com/internetarchive/openlibrary/pull/14395"
-    },
-    {
-      "repo": "internetarchive/infogami",
-      "number": 288,
-      "title": "perf(readquery): cache datatype lookups on the type's revision",
-      "date": "2026-11-11",
-      "status": "review",
-      "href": "https://github.com/internetarchive/infogami/pull/288"
-    },
-    {
-      "repo": "internetarchive/openlibrary",
-      "number": 14349,
-      "title": "fix(import): route ISBNs by canonical form, not raw string length",
-      "date": "2026-11-10",
-      "status": "review",
-      "href": "https://github.com/internetarchive/openlibrary/pull/14349"
+      "href": "https://github.com/hyperjump-io/json-schema/pull/178"
     },
     {
       "repo": "hyperjump-io/json-schema",
-      "number": 146,
+      "number": 176,
+      "title": "Find the keyword that applies a reference schema in keywordApplying",
+      "date": "2026-11-23",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/176"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 174,
+      "title": "Read lint directives next to $ref in draft-04 through draft-07",
+      "date": "2026-11-23",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/174"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 172,
+      "title": "Stop following references that lead back to themselves in effectOf",
+      "date": "2026-11-23",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/172"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 169,
+      "title": "Throw when a file bundle's 'id' would break its references",
+      "date": "2026-11-23",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/169"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 167,
+      "title": "Report identifiers that can't be parsed as a URL",
+      "date": "2026-11-23",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/167"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 164,
+      "title": "Look up keywords by name with Object.hasOwn",
+      "date": "2026-11-23",
+      "status": "review",
+      "href": "https://github.com/hyperjump-io/json-schema/pull/164"
+    },
+    {
+      "repo": "hyperjump-io/json-schema",
+      "number": 162,
       "title": "Throw when registering over a schema with a different $id",
-      "date": "2026-11-08",
+      "date": "2026-11-23",
       "status": "review",
-      "href": "https://github.com/hyperjump-io/json-schema/pull/146"
+      "href": "https://github.com/hyperjump-io/json-schema/pull/162"
     },
     {
-      "repo": "hyperjump-io/json-schema-formats",
-      "number": 27,
-      "title": "Handle address literal tags the same way in isEmail and isIdnEmail",
-      "date": "2026-10-30",
+      "repo": "hyperjump-io/json-schema",
+      "number": 161,
+      "title": "Percent-encode \"#\" in URI fragments",
+      "date": "2026-11-23",
       "status": "review",
-      "href": "https://github.com/hyperjump-io/json-schema-formats/pull/27"
-    },
-    {
-      "repo": "internetarchive/openlibrary",
-      "number": 14007,
-      "title": "feat(tags): add a dashboard for exploring tags by type",
-      "date": "2026-10-18",
-      "status": "review",
-      "href": "https://github.com/internetarchive/openlibrary/pull/14007"
-    },
-    {
-      "repo": "internetarchive/openlibrary",
-      "number": 13941,
-      "title": "fix(lenny): an unreadable node body is unreachable, not zero loans",
-      "date": "2026-10-15",
-      "status": "review",
-      "href": "https://github.com/internetarchive/openlibrary/pull/13941"
+      "href": "https://github.com/hyperjump-io/json-schema/pull/161"
     }
   ],
   "prStatus": {
+    "https://github.com/hyperjump-io/json-schema/pull/178": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/176": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/174": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/172": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/169": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/167": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/164": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/162": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/161": "review",
+    "https://github.com/internetarchive/openlibrary/pull/14594": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/14568": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/14563": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/14562": "merged",
+    "https://github.com/internetarchive/openlibrary/pull/14559": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/153": "closed",
     "https://github.com/internetarchive/infogami/pull/288": "review",
     "https://github.com/internetarchive/openlibrary/pull/14395": "review",
     "https://github.com/internetarchive/openlibrary/pull/14349": "review",
     "https://github.com/hyperjump-io/json-schema-errors/pull/303": "merged",
-    "https://github.com/hyperjump-io/json-schema/pull/146": "review",
+    "https://github.com/hyperjump-io/json-schema/pull/146": "closed",
     "https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1262": "review",
     "https://github.com/hyperjump-io/json-language-server/pull/186": "merged",
-    "https://github.com/hyperjump-io/json-schema-formats/pull/27": "review",
+    "https://github.com/hyperjump-io/json-schema-formats/pull/27": "closed",
     "https://github.com/json-schema-org/JSON-Schema-Test-Suite/pull/1254": "merged",
     "https://github.com/hyperjump-io/json-schema/pull/140": "merged",
     "https://github.com/internetarchive/openlibrary/pull/14198": "merged",
